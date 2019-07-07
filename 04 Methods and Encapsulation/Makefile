@@ -4,11 +4,11 @@
 
 #
 # period '.' is not allowed, because this has a recerved meaning. TODO and that is?
-run: Java_Core_API.class my.jar
-	java -cp my.jar cursus.oca.se.Java_Core_API
+run: Java_lambda.class my.jar
+	java -cp my.jar cursus.oca.se.Java_lambda
 
-Java_Core_API.class: Java_Core_API.java
-	javac -d . Java_Core_API.java
+Java_lambda.class: Java_lambda.java
+	javac -d . Java_lambda.java
 
-my.jar: Java_Core_API.class
+my.jar: Java_lambda.class
 	jar cf $@ cursus
